@@ -20,8 +20,10 @@ app.listen(PORT, "0.0.0.0", () => {
 // IMPORTANTE: Cambia esta URL por la de tu app
 const BASE44_FUNCTION_URL = 'https://urbania-assistant.base44.app/functions/whatsappRespond';
 
-const SESSION_DIR = process.env.SESSION_DIR ||
-  path.join(path.dirname(fileURLToPath(import.meta.url)), '.wwebjs_auth');
+const SESSION_DIR = path.join(
+    path.dirname(fileURLToPath(import.meta.url)),
+    ".wwebjs_auth"
+  );
 
 if (!fs.existsSync(SESSION_DIR)) {
   fs.mkdirSync(SESSION_DIR, { recursive: true });
