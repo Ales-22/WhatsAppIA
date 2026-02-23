@@ -3,10 +3,14 @@
     "version": "1.0.0",
     "main": "server.js",
     "type": "module",
-    "scripts": { "start": "node server.js" },
+    "scripts": {
+      "start": "node server.js",
+      "postinstall": "node ./scripts/install-chrome.js"
+    },
     "dependencies": {
       "whatsapp-web.js": "^1.25.2",
-      "qrcode-terminal": "^0.12.0"
+      "qrcode-terminal": "^0.12.0",
+      "puppeteer": "^24.1.1"
     },
     "engines": { "node": "18" }
   }
